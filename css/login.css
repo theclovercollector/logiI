@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+}
+/* -----------------로고----------- */
+.logo {
+    display: flex;
+    justify-content: center;
+}
+.logo img {
+    margin: 85px auto;
+    width: 200px;
+}
+
+/* -------------메인------------ */
+.box {
+    width: 800px;
+    height: 426px;
+    margin: 0 auto;
+}
+
+/* -------------box1------------ */
+.box .box1 {
+    width: 100%;
+    height: 70px;
+    cursor: pointer;
+}
+
+.box .box1 .login {
+    width: 50%;
+    height: 70px;
+    float: left;
+    background-color: #00cccc;
+    color: #fff;
+    text-align: center;
+    /* border: 1px solid #9e9e9e; */
+    line-height: 60px;
+    font-size: 18px;
+}
+.box .box1 .join {
+    width: 50%;
+    height: 70px;
+    float: right;
+    text-align: center;
+    border-top: 1px solid #DDDDDC;
+    border-right: 1px solid #DDDDDC;
+    line-height: 60px;
+    font-size: 18px;
+}
+
+/* -------------box2------------ */
+.box .box2 {
+    width: 100%;
+    height: 355px;
+    border: 1px solid #DDDDDC;
+}
+
+.box .box2 form {
+    width: 100%;
+    padding-top: 20px;
+}
+.box .box2 form ul li{
+    list-style: none;
+    margin: 30px 150px;
+}
+.box .box2 form ul li input {
+    width: 500px;
+    padding: 15px 400px 15px 30px;
+    border: 1px solid #DDDDDC;
+    font-size: 15px;
+}
+
+.box .box2 form ul li .btn {
+    padding: 15px 215px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #00cccc;
+    color: white;
+    border: 1px solid #00cccc;
+}
+
+.box .box2 form ul li .btn:hover {
+    opacity: 0.8;
+}
+
+.box .box2 form p {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #505050;
+    cursor: pointer;
+}
+
+.box .box2 form p:hover {
+    color: #000;
+}
+/* ------------box3------------ */
+.box .box3 {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #DDDDDC;
+    margin-top: 30px;
+}
+
+.box .box3 .app_login{
+    position: relative;
+    cursor: pointer;
+}
+
+.box .box3 .app_login img {
+    width: 35px;
+    float: left;
+    margin: 5px 30px;
+}
+
+.box .box3 .app_login p {
+    float: left;
+    line-height: 48px;
+}
+.box .box3 .app_login .naver{
+    width: 350px;
+    height: 50px;
+    border: 1px solid #00CF37;
+    background-color: #00CF37;
+    color: #fff;
+    position: absolute;
+    top: 35px; left: 35px;
+}
+
+.box .box3 .app_login .naver:hover{
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.box .box3 .app_login .kakao{
+    width: 350px;
+    height: 50px;
+    border: 1px solid #FFE227;
+    background-color: #FFE227;
+    position: absolute;
+    top: 35px; right: 35px;
+}
+.box .box3 .app_login .kakao img {
+    width: 40px;
+}
+.box .box3 .app_login .kakao:hover{
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.box .box3 .app_login .facebook{
+    width: 350px;
+    height: 50px;
+    border: 1px solid #3B5998;
+    background-color: #3B5998;
+    color: #fff;
+    position: absolute;
+    top: 115px; left: 35px;
+
+}
+.box .box3 .app_login .facebook:hover{
+    font-weight: bold;
+    opacity: 0.8;
+}
+.box .box3 .app_login .google{
+    width: 350px;
+    height: 50px;
+    border: 3px solid #2899F3;
+    position: absolute;
+    top: 115px; right: 35px;
+}
+
+.box .box3 .app_login .google img {
+    width: 25px;
+    margin: 10px 35px;
+}
+.box .box3 .app_login .google p {
+    line-height: 44px;
+}
+.box .box3 .app_login .google:hover{
+    font-weight: bold;
+    opacity: 0.8;
+}

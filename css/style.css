@@ -1,0 +1,653 @@
+ @charset "utf-8";
+
+@font-face {font-family:MalgunGothic; src:url(images/MalgunGothic.eot);}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.clear::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+body{
+    font-family:MalgunGothic;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~전반적인 ~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.inner {
+    width: 1020px;
+    margin: 0 auto;
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~헤더 상단 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.hd_inner {
+    width: 100%;
+    height: 130px;
+}
+
+.hd_top {
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #00cccc;
+}
+
+.hd_top .logo {
+    width: 120px;
+    height: 50px;
+    float: left;
+    background: url('../images/logii_new.png') no-repeat;
+    background-size: contain;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
+.hd_top .logo a {
+    display: none;
+}
+
+.hd_top .depth1 {
+    padding-left: 73px;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: end;
+    gap: 45px;
+    font-size: 16px;
+
+}
+
+.hd_top .depth1 li {
+    font-weight: bold;
+    position: relative;
+}
+.hd_top .depth1 li a {
+    padding-bottom: 20px;
+}
+
+
+.hd_top .depth1 li .depth2 li {
+    display: none;
+    font-weight: normal;
+}
+
+.hd_top .depth1 li .depth2 li:hover {
+    font-weight: bold;
+}
+
+.login_util ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+
+.login_util ul li span{
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.hd_top .depth1 li .depth2 {
+    position: absolute;
+    top: 40px;
+    left: -30px;
+    line-height: 40px;
+}
+.hd_top .depth1 li:nth-child(1) .depth2 {
+    width: 130px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* 메뉴 hover------------------------ */
+.hd_top .depth1 li:nth-child(1):hover .depth2{
+    border: 1px solid #00cccc;
+    padding: 10px;
+    opacity: 1;
+    visibility: visible;
+    transition: .5s;
+}
+
+.hd_top .depth1 li:nth-child(1):hover .depth2 li {
+    display: block;
+}
+/* ~~~~~~~~~~~~~~헤더 하단~~~~~~~~~~~~~~~~~ */
+
+.hd_bot {
+    margin: 0 auto;
+    height: 30px;
+    font-size: 12px;
+    display: flex;
+    justify-items: flex-start;
+    padding-top: 7px;
+}
+
+.hd_bot h3 {
+    padding-left: 97px;
+}
+
+.hd_bot i {
+    padding-left: 15px;
+}
+
+.hd_bot p {
+    padding-left: 20px;
+}
+
+/* ~~~~~~~~~~~~~~// 헤더 하단 ~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~메인 ~~~~~~~~~~~~~~~ */
+.main_inner {
+    width: 1020px;
+    height: 1800px;
+    margin: 0 auto;
+}
+
+    /* 메인 top */
+.main_top {
+    width: 100%;
+}
+         /* 메인 reserve */
+.main_reserve {
+    width: 1020px;
+    height: 482px;
+    padding-top: 30px;
+    position: relative;
+}
+
+.tle {
+    padding-left: 16px;
+    padding-bottom: 20px;
+    display: block;
+}
+
+.reserve_icon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    float: left;
+}
+
+.reserve_icon li {
+    width: 326px;
+    height: 200px;
+    border: 2px solid #00cccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.reserve_icon li > a {
+    display: block;
+    font-weight: bold;
+    line-height: 45px;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.reserve_icon li:nth-child(1) {
+    background: url('../images/reserve1.png') center/cover no-repeat;
+    background-size: 65%;
+    background-position: 50% 70%;
+    
+}
+
+/* 편의점택배 hover---------- */
+
+.main_top .reserve_icon_hover {
+    width: 326px;
+    height: 430px;
+    border: 2px solid #00cccc;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px #9e9e9e;
+    padding: 30px 30px;
+    z-index: 9;
+    position: absolute;
+    top: 75px; left: 0;
+    display: none;
+    
+}
+
+.main_top .reserve_icon_hover h3 {
+    font-size: 18px;
+    color: #9e9e9e;
+}
+
+.main_top .reserve_icon_hover h2 {
+    text-align: left;
+    padding: 10px 0px 20px 10px;
+}
+
+.main_top .reserve_icon_hover ul {
+    text-align: right;
+    float: right;
+    line-height: 25px;
+}
+
+.main_top .reserve_icon_hover ul li {
+    color: #505050;
+}
+
+.main_top .reserve_icon_hover ul .red {
+    color: #FF3366;
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.main_top .reserve_icon_hover ul li ul {
+    padding-left: 10px;
+}
+
+.main_top .reserve_icon_hover ul li ul .bold {
+    font-weight: bold;
+    color: #000;
+}
+
+.main_top .reserve_icon_hover img {
+    width: 260px;
+    padding: 20px;
+}
+
+
+
+
+.reserve_icon li:nth-child(2) {
+    background: url('../images/reserve2.png') center/cover no-repeat;
+    background-size: 80%;
+    background-position: 50% 70%;
+}
+.reserve_icon li:nth-child(3) {
+    background: url('../images/reserve3.png') center/cover no-repeat;
+    background-size: 80%;
+    background-position: 50% 70%;
+}
+.reserve_icon li:nth-child(4) {
+    background: url('../images/reserve4.png') center/cover no-repeat;
+    background-size: 50%;
+    background-position: 50% 70%;
+}
+.reserve_icon li:nth-child(5) {
+    background: url('../images/reserve5.png') center/cover no-repeat;
+    background-size: 35%;
+    background-position: 50% 70%;
+}
+.reserve_icon li:nth-child(6) {
+    background: url('../images/reserve6.png') center/cover no-repeat;
+    background-size: 80%;
+    background-position: 50% 70%;
+}
+
+/* // 택배예약 */
+
+
+/* 택배페이 */
+.main_pay {
+    margin-top: 50px;
+    height: 300px;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    background: url('../images/택배페이.png') center/cover no-repeat;
+}
+
+.banner a {
+    display: none;
+}
+/* //택배 페이 */
+
+/* 택배용품몰 */
+.main_mall {
+    width: 100%;
+    padding: 50px 0;
+}
+
+.mall_wrap {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mall_wrap .mall_logo {
+    width: 250px;
+    height: 100%;
+    background: url('../images/reservemall.png') center/cover no-repeat;
+    background-size: 50%;
+    border-right: 2px solid #00cccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.mall_wrap .mall_logo a {
+    display: block;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.mall_wrap .mall_slider {
+    width: 700px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.mall_wrap .swiper-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.mall_wrap .swiper-wrapper .swiper-slide {
+    width: 190px;
+    height: 190px;
+    margin: 5px 0;
+    text-align: center;
+    float: left;
+}
+
+.mall_wrap .swiper-wrapper .swiper-slide:nth-child(1) {
+    background: url('../images/mall_box.PNG') center/contain no-repeat;
+}
+.mall_wrap .swiper-wrapper .swiper-slide:nth-child(2) {
+    background: url('../images/mall_small.PNG') center/contain no-repeat;
+}
+.mall_wrap .swiper-wrapper .swiper-slide:nth-child(3) {
+    background: url('../images/mall_cheap.PNG') center/contain no-repeat;
+}
+.mall_wrap .swiper-wrapper .swiper-slide:nth-child(4) {
+    background: url('../images/mall_wrap.PNG') center/contain no-repeat;
+}
+.mall_wrap .swiper-wrapper .swiper-slide:nth-child(5) {
+    background: url('../images/mall_tape.PNG') center/contain no-repeat;
+}
+
+.mall_wrap .swiper-wrapper .swiper-slide a {
+    display: none;
+}
+
+/* 택배용품몰 버튼  */
+.swiper .btn_next {
+    width: 30px;
+    height: 30px;
+    background: url('../images/next1.png')no-repeat center/cover;
+    position: absolute;
+    top: 40%;
+    right: 0%;
+    cursor: pointer;  
+    z-index: 9;
+}
+
+.swiper .btn_prev {
+    width: 30px;
+    height: 30px;
+    background: url('../images/prev1.png')no-repeat center/cover;
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    cursor: pointer;  
+    z-index: 9;
+}
+
+
+/* // 택배용품몰 */
+
+/* ~~~~~~~~~~~~~~메인 bottom~~~~~~~~~~~~~~~~ */
+
+.main_btm {
+    width: 100%;
+    height: 650px;
+}
+
+.btm_service {
+    width: 100%;
+    height: 320px;
+    margin-top: 50px;
+}
+
+.btm_service .chatbot {
+    width: 265px;
+    height: 265px;
+    background: url('../images/customer_home_qna.gif') center/cover no-repeat;
+    background-size: 50%;
+    border: 2px solid #00cccc;
+    border-radius: 10px;
+    float: left;
+}
+
+.btm_service .chatbot a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btm_service .btle {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.chatbot_p {
+    display: block;
+    margin-top: 160px;
+}
+
+.chatbot p {
+    font-size: 12px;
+    font-weight: 200;
+    text-align: center;
+}
+
+.btm_service .service_center {
+    width: 733px;
+    height: 265px;
+    display: flex;
+    justify-content: space-between;
+    float: left;
+    margin-left: 18px;
+}
+
+.btm_service .service_center > li {
+    width: 235px;
+    height: 265px;
+    border: 2px solid #00cccc;
+    border-radius: 10px;
+}
+
+.btm_service .service_center > li:nth-child(1) {
+    background: url('../images/cust_member.gif') center/contain no-repeat;
+    background-size: 30%;
+}
+.btm_service .service_center > li:nth-child(2) {
+    background: url('../images/cust_service.gif') center/contain no-repeat;
+    background-size: 30%;
+}
+.btm_service .service_center > li:nth-child(3) {
+    background: url('../images/cust_report.gif') center/contain no-repeat;
+    background-size: 30%;
+}
+
+.btm_service .service_center li ul {
+    padding-top: 140px;
+}
+
+.btm_service .service_center li ul li {
+    font-size: 12px;
+    font-weight: 200;
+    text-align: left;
+    list-style: disc;
+    margin: 5px 40px;
+}
+
+
+.btm_service .chatbot:hover {
+    box-shadow: 3px 3px 3px #9e9e9e;
+}
+.btm_service .service_center > li:nth-child(1):hover {
+    box-shadow: 3px 3px 3px #9e9e9e;
+}
+.btm_service .service_center > li:nth-child(2):hover {
+    box-shadow: 3px 3px 3px #9e9e9e;
+}
+.btm_service .service_center > li:nth-child(3):hover {
+    box-shadow: 3px 3px 3px #9e9e9e;
+}
+
+/* // 고객센터 끝 */
+
+/* 택배파인더  */
+.btm_finder {
+    width: 100%;
+    height: 300px;
+}
+
+.finder_wrap {
+    width: 100%;
+    height: 100%;
+    margin: 30px 0;
+    background: url('../images/택배파인더.jpg') center/contain no-repeat;
+    position: relative;
+}
+
+.finder_wrap a h3{
+    display: none;
+}
+
+.finder_wrap .btn_app1{  
+    position: absolute;
+    top: 80%;
+    left: 6%;
+    /* display: block; */
+    width: 165px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px 10px;
+}
+.finder_wrap .btn_app2{ 
+    position: absolute;
+    top: 80%;
+    left: 24%;
+    /* display: block; */
+    width: 145px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px 10px;
+}
+
+.finder_wrap .btn_app img {
+    width: 25px;
+    float: left;
+}
+.finder_wrap .btn_app p {
+    float: right;
+    text-align: center;
+}
+
+.btn_app button:nth-child(1){
+    display: block;
+    width: 150px;
+    height: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+
+/* 포기했다가 쌤이 도와주심 야호! */
+
+/* footer */
+footer {
+    width: 100%;
+    height: 100%;
+    margin-top: 60px;
+}
+
+.footer_inner {
+    width: 1020px;
+    height: 100px;
+
+}
+
+.footer_inner .info {
+    width: 835px;
+    height: 50px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.footer_inner .info p {
+    /* border-right: 1px solid; */
+    font-size: 14px;
+    padding-right: 3px;
+}
+
+.footer_inner .foot_top {
+    display: flex;
+    justify-content: space-around;
+}
+.footer_inner .foot_btm {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer_inner .info span {
+    font-size: 16px;
+}
+
+.gotop {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    background-color: #00CCCC;
+    color: #fff;
+    right: 100px;
+    bottom: 50px;
+    display: none;
+    border-radius: 50%;
+}
+
+.gotop span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 17px;
+    left: 15px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: rotate(45deg);
+}
